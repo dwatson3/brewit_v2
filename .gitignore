@@ -1,1 +1,8 @@
 node_modules
+.sass-cache
+dist
+npm-debug*
+!.gitkeep
+.bundle
+tests.tap
+test-results.xml

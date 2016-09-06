@@ -7,9 +7,9 @@
   "scripts": {
     "start": "[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\"; nvm use; echo \"NODE VERSION: `node -v`\"; (node server.js &) ; webpack-dev-server --hot --inline",
     "karma": "BABEL_ENV='test' karma start",
-    "test": "BABEL_ENV='test' karma start --single-run --reporters jenkins,mocha",
+    "test": "BABEL_ENV='test' karma start --single-run --reporters mocha",
     "pretest": "npm run build",
-    "build": "npm run lint && webpack --progress --colors --config webpack/production.js",
+    "build": "npm run lint && webpack --progress --colors",
     "lint": "standard",
     "prepush": "npm test"
   },
