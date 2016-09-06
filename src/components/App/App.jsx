@@ -1,12 +1,9 @@
 // Monogoto
-import React, { PropTypes } from 'react'
-import HTML5Backend from 'react-dnd-html5-backend'
+import React from 'react'
 import suitClassNames from 'suitcss-classnames'
-import { actions } from '../../state/app_actions'
 require('./App.scss')
 
 export class App extends React.Component {
-
 
   classNames (options) {
     return suitClassNames({
@@ -17,8 +14,6 @@ export class App extends React.Component {
   }
 
   render () {
-    const { example } = this.props
-
     const appClasses = this.classNames()
     const titleClasses = this.classNames({descendant: 'title'})
 
@@ -29,8 +24,3 @@ export class App extends React.Component {
     )
   }
 }
-
-// feed into props manually
-
-
-

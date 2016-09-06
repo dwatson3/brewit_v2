@@ -9,7 +9,6 @@ export function actions (dispatch) {
     if (!actionCreators[namespace]) throw (new Error(`${namespace} actions undefined`))
 
     result[namespace] = Object.keys(actionCreators[namespace]).reduce((actions, name) => {
-
       actions[name] = () => {
         dispatch(actionCreators[namespace][name].apply(null, arguments))
       }
