@@ -1,9 +1,7 @@
-'use strict'
-
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { App } from './components/App'
+import { App } from './components/App/App.jsx'
 
-var rootNode = document.getElementById('appRoot')
+const rootNode = document.getElementById('appRoot')
 
 ReactDOM.render(<App />, rootNode)
