@@ -40,7 +40,7 @@ class BeerList extends Component {
     const beerList = beers.map((beer) => {
       return <h3>{beer.name}</h3>
     })
-    
+
     return (
       <div>
         {beerList}
@@ -76,7 +76,6 @@ class BeerSearch extends Component {
             if (err) throw new Error(err)
             onChange(JSON.parse(result.body.text).data)
           })
-
         }}>OK</button>
         <button onClick={() => onChange([])} >clear</button>
       </div>

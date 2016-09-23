@@ -5,7 +5,7 @@ const webpackDevMiddleware = require('webpack-dev-middleware')
 const request = require('superagent')
 const key = require('./config.json').api_secret_key
 
-const api = require('./server/api')
+// const api = require('./server/api')
 
 const config = require('./webpack.config')
 const compiler = webpack(config)
