@@ -27,6 +27,17 @@ app.post('/query', function (req, res) {
     })
 })
 
+app.post('/location', function (req, res) {
+  console.log(req.location)
+  request
+    .get(`http://api.brewerydb.com/v2/search?q=${req.query.location}&type=locations&key=${key}`)
+    .end((err, result) => {
+      if (err) throw new Error(err)
+
+      res.send(result)
+    })
+})
+
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
 })

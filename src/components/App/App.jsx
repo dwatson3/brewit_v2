@@ -2,6 +2,7 @@
 import React, {Component} from 'react'
 import request from 'superagent'
 import suitClassNames from 'suitcss-classnames'
+import './styles.scss'
 
 require('./App.scss')
 
@@ -25,9 +26,10 @@ export class App extends Component {
 
     return (
       <div className={appClasses}>
-        <div className={titleClasses}>Beverages</div>
+        <div className={titleClasses}>Brew It </div>
         <BeerSearch onChange={(list) => this.setState({ beers: list })} />
         <BeerList beers={beers} />
+        <LocationSearch />
       </div>
     )
   }
@@ -60,7 +62,7 @@ class BeerSearch extends Component {
     const { onChange } = this.props
     const { value } = this.state
     return (
-      <div>
+      <div className='Beer-search-form'>
         <input
           type='text'
           value={value}
@@ -80,5 +82,19 @@ class BeerSearch extends Component {
         <button onClick={() => onChange([])} >clear</button>
       </div>
     )
+  }
+}
+
+class LocationSearch extends Component {
+  render () {
+    return (
+      <div className='Location-search-form'>
+        <input
+          type='text'
+          placeholder='Search Beers by a Location Near You'
+        />
+        <button>Search</button>
+      </div>
+      )
   }
 }
