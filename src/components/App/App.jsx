@@ -9,7 +9,10 @@ require('./App.scss')
 export class App extends Component {
   constructor (props, context) {
     super(props, context)
-    this.state = { beers: [] }
+    this.state = {
+      beers: [],
+      breweries: [],
+    }
   }
   classNames (options) {
     return suitClassNames({
@@ -17,6 +20,14 @@ export class App extends Component {
       component: 'ApplicationNode',
       ...options
     })
+  }
+
+  handleBeerChange = (list) => {
+    this.setState({ beers: list })
+  }
+
+  handleBreweryChange = (list) => {
+    this.setState({ breweries: list})
   }
 
   render () {
@@ -27,9 +38,9 @@ export class App extends Component {
     return (
       <div className={appClasses}>
         <div className={titleClasses}>Brew It </div>
-        <BeerSearch onChange={(list) => this.setState({ beers: list })} />
+        <BeerSearch onChange={this.handleBeerChange} />
         <BeerList beers={beers} />
-        <LocationSearch />
+        <LocationSearch onChange={this.handleBreweryChange} />
       </div>
     )
   }
@@ -40,7 +51,7 @@ class BeerList extends Component {
     const { beers } = this.props
 
     const beerList = beers.map((beer) => {
-      return <h3>{beer.name}</h3>
+      return <h3 key={`${beer.name}-${index}`}>{beer.name}</h3>
     })
 
     return (
@@ -58,6 +69,17 @@ class BeerSearch extends Component {
       value: ''
     }
   }
+  handleClick = (e) => {
+    const { value } = this.state
+    request.get(`/beers?name=${value}`)
+      .end((err, result) => {
+        if (err) throw new Error(err)
+        this.props.onChange(JSON.parse(result.body.text).data)
+      })
+  }
+  handleClear = () => {
+    this.props.onChange([])
+  }
   render () {
     const { onChange } = this.props
     const { value } = this.state
@@ -71,29 +93,43 @@ class BeerSearch extends Component {
             this.setState({ value: e.currentTarget.value })
           }}
         />
-        <button onClick={(e) => {
-          console.log('anything?')
-          request.post(`/query?name=${value}`)
-          .end((err, result) => {
-            if (err) throw new Error(err)
-            onChange(JSON.parse(result.body.text).data)
-          })
-        }}>OK</button>
-        <button onClick={() => onChange([])} >clear</button>
+        <button onClick={this.handleClick}>Search</button>
+        <button onClick={this.handleClear}>Clear</button>
       </div>
     )
   }
 }
 
 class LocationSearch extends Component {
+  constructor (props, context) {
+    super(props, context)
+    this.state = {
+      value: ''
+    }
+  }
+  handleClick = (e) => {
+    const { value } = this.state
+    request.get(`/breweries?location=${value}`)
+      .end((err, result) => {
+        if (err) throw new Error(err)
+        this.props.onChange(JSON.parse(result.body.text).data)
+      })
+  }
+  handleClear = () => {
+    this.props.onChange([])
+  }
   render () {
     return (
       <div className='Location-search-form'>
         <input
           type='text'
           placeholder='Search Beers by a Location Near You'
+          onChange={(e) => {
+            this.setState({ value: e.currentTarget.value })
+          }}
         />
-        <button>Search</button>
+        <button onClick={this.handleClick}>Search</button>
+        <button onClick={this.handleClear}>Clear</button>
       </div>
       )
   }

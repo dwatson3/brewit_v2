@@ -13,7 +13,7 @@ const compiler = webpack(config)
 app.use(webpackDevMiddleware(compiler, { stats: { colors: true } }))
 // app.use('/api', api)
 
-app.post('/query', function (req, res) {
+app.get('/beers', function (req, res) {
   // eventually, we will call a function like getBreweryDb to make an API
   // request for brew info!
   console.log(req.query)
@@ -27,12 +27,16 @@ app.post('/query', function (req, res) {
     })
 })
 
-app.post('/location', function (req, res) {
-  console.log(req.location)
+app.get('/breweries', function (req, res) {
+  console.log(req.query)
   request
-    .get(`http://api.brewerydb.com/v2/search?q=${req.query.location}&type=locations&key=${key}`)
+    .get(`http://api.brewerydb.com/v2/locations?postalCode=${req.query.location}&key=${key}`)
     .end((err, result) => {
-      if (err) throw new Error(err)
+      if (err) {
+        console.error(err)
+        console.error(result)
+        // throw new Error(err)
+      }
 
       res.send(result)
     })
