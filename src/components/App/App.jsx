@@ -50,7 +50,7 @@ class BeerList extends Component {
   render () {
     const { beers } = this.props
 
-    const beerList = beers.map((beer) => {
+    const beerList = beers.map((beer, index) => {
       return <h3 key={`${beer.name}-${index}`}>{beer.name}</h3>
     })
 
