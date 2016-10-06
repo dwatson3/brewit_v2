@@ -34,6 +34,7 @@ export class App extends Component {
     const appClasses = this.classNames()
     const titleClasses = this.classNames({descendant: 'title'})
     const { beers } = this.state
+    const { breweries } = this.state
 
     return (
       <div className={appClasses}>
@@ -41,6 +42,7 @@ export class App extends Component {
         <BeerSearch onChange={this.handleBeerChange} />
         <BeerList beers={beers} />
         <LocationSearch onChange={this.handleBreweryChange} />
+        <BreweryList breweries={breweries} />
       </div>
     )
   }
@@ -132,5 +134,28 @@ class LocationSearch extends Component {
         <button onClick={this.handleClear}>Clear</button>
       </div>
       )
+  }
+}
+
+class BreweryList extends Component {
+  render () {
+    const { breweries } = this.props
+    const breweryList = breweries.map((brewery, index) => {
+      return (
+        <div key={`${brewery.brewery.name}-${index}`}> 
+          <h3>{brewery.brewery.name}</h3>
+          <h4>{brewery.brewery.isOrganic === 'Y' ? 'Organic' : 'Not Organic'}</h4>
+          <h4>{brewery.streetAddress}</h4>
+          <h6>{brewery.brewery.website}</h6>
+        </div>  
+        )
+
+    })
+
+    return (
+      <div>
+        {breweryList}
+      </div>
+    )
   }
 }
