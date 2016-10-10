@@ -3,6 +3,10 @@ import React, {Component} from 'react'
 import request from 'superagent'
 import suitClassNames from 'suitcss-classnames'
 import './styles.scss'
+import BeerList from './BeerList'
+import BreweryList from './BreweryList'
+import BeerSearch from './BeerSearch'
+import LocationSearch from './LocationSearch'
 
 require('./App.scss')
 
@@ -48,114 +52,4 @@ export class App extends Component {
   }
 }
 
-class BeerList extends Component {
-  render () {
-    const { beers } = this.props
 
-    const beerList = beers.map((beer, index) => {
-      return <h3 key={`${beer.name}-${index}`}>{beer.name}</h3>
-    })
-
-    return (
-      <div>
-        {beerList}
-      </div>
-    )
-  }
-}
-
-class BeerSearch extends Component {
-  constructor (props, context) {
-    super(props, context)
-    this.state = {
-      value: ''
-    }
-  }
-  handleClick = (e) => {
-    const { value } = this.state
-    request.get(`/beers?name=${value}`)
-      .end((err, result) => {
-        if (err) throw new Error(err)
-        this.props.onChange(JSON.parse(result.body.text).data)
-      })
-  }
-  handleClear = () => {
-    this.props.onChange([])
-  }
-  render () {
-    const { onChange } = this.props
-    const { value } = this.state
-    return (
-      <div className='Beer-search-form'>
-        <input
-          type='text'
-          value={value}
-          placeholder='Search for Craft Beers Here'
-          onChange={(e) => {
-            this.setState({ value: e.currentTarget.value })
-          }}
-        />
-        <button onClick={this.handleClick}>Search</button>
-        <button onClick={this.handleClear}>Clear</button>
-      </div>
-    )
-  }
-}
-
-class LocationSearch extends Component {
-  constructor (props, context) {
-    super(props, context)
-    this.state = {
-      value: ''
-    }
-  }
-  handleClick = (e) => {
-    const { value } = this.state
-    request.get(`/breweries?location=${value}`)
-      .end((err, result) => {
-        if (err) throw new Error(err)
-        this.props.onChange(JSON.parse(result.body.text).data)
-      })
-  }
-  handleClear = () => {
-    this.props.onChange([])
-  }
-  render () {
-    return (
-      <div className='Location-search-form'>
-        <input
-          type='text'
-          placeholder='Search Beers by a Location Near You'
-          onChange={(e) => {
-            this.setState({ value: e.currentTarget.value })
-          }}
-        />
-        <button onClick={this.handleClick}>Search</button>
-        <button onClick={this.handleClear}>Clear</button>
-      </div>
-      )
-  }
-}
-
-class BreweryList extends Component {
-  render () {
-    const { breweries } = this.props
-    const breweryList = breweries.map((brewery, index) => {
-      return (
-        <div key={`${brewery.brewery.name}-${index}`}> 
-          <h3>{brewery.brewery.name}</h3>
-          <h4>{brewery.brewery.isOrganic === 'Y' ? 'Organic' : 'Not Organic'}</h4>
-          <h4>{brewery.streetAddress}</h4>
-          <h6>{brewery.brewery.website}</h6>
-        </div>  
-        )
-
-    })
-
-    return (
-      <div>
-        {breweryList}
-      </div>
-    )
-  }
-}
