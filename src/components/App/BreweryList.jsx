@@ -7,6 +7,7 @@ class BreweryList extends Component {
       return (
         <div key={`${brewery.brewery.name}-${index}`}>
           <h3>{brewery.brewery.name}</h3>
+          <h3>{brewery.brewery.description}</h3>
           <h4>{brewery.brewery.isOrganic === 'Y' ? 'Organic' : 'Not Organic'}</h4>
           <h4>{brewery.streetAddress}</h4>
           <h6>{brewery.brewery.website}</h6>

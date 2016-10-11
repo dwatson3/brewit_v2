@@ -9,7 +9,10 @@ class BeerList extends Component {
       // if (!beer.style) debugger
       const description = beer.description || beer.style.description
       return <div key={`${beer.name}-${index}`}><h3>{beer.name} </h3>
-        <span>{ description }</span>
+        <span> { description } </span> <br />
+        <span>{beer.isOrganic === 'Y' ? 'Organic' : 'Not Organic'}</span> <br />
+        <span> {beer.style.ibuMin}, {beer.style.ibuMax} </span> <br />
+        <span> {beer.style.abvMin}, {beer.style.abvMax} </span>
       </div>
     })
 
