@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import request from 'superagent'
+import { Label, DropdownButton, MenuItem, Form, Button, ButtonToolbar } from 'react-bootstrap' 
 
 class BeerSearch extends Component {
   constructor (props, context) {
@@ -34,6 +35,9 @@ class BeerSearch extends Component {
         />
         <button onClick={this.handleClick}>Search</button>
         <button onClick={this.handleClear}>Clear</button>
+        <ButtonToolbar>
+        <Button bsStyle="success" bsSize="large">Success</Button>  
+        </ButtonToolbar>
       </div>
     )
   }

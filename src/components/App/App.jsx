@@ -3,10 +3,16 @@ import React, {Component} from 'react'
 import request from 'superagent'
 import suitClassNames from 'suitcss-classnames'
 import './styles.scss'
+
 import BeerList from './BeerList'
 import BreweryList from './BreweryList'
 import BeerSearch from './BeerSearch'
 import LocationSearch from './LocationSearch'
+
+import Normalize from './Normalize.css'
+
+import { Label, DropdownButton, MenuItem, Form, Button } from 'react-bootstrap' 
+
 
 require('./App.scss')
 
