@@ -15,7 +15,7 @@
 }
 
 ul.LeftFlexContainer {
-  background-color: #FFAF53;
+  background-color: #E88140;
   height: 100px;
   list-style-type: none;
   flex-grow: 1;
@@ -28,6 +28,7 @@ ul.LeftFlexContainer {
   font-family: Impact, Charcoal, sans-serif;
   font-size: 16px;
   // color: #fff;
+  letter-spacing: 1px;
   padding-top: 5px;
 }
 
@@ -38,7 +39,7 @@ ul.LeftFlexContainer {
 .Subtitle {
   position: relative;
   top: 50px;
-  right: 100px;
+  right: 110px;
   // text-align: center;
 }
 

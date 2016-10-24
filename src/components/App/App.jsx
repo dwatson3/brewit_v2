@@ -9,9 +9,13 @@ import BreweryList from './BreweryList'
 import BeerSearch from './BeerSearch'
 import LocationSearch from './LocationSearch'
 
+import createBrowserHistory from 'history/lib/createBrowserHistory'
+import { Router, Route, Link, IndexRoute } from 'react-router'
 import Normalize from './Normalize.css'
 
 import { Label, DropdownButton, MenuItem, Form, Button } from 'react-bootstrap' 
+
+import About from './About'
 
 var FontAwesome = require('react-fontawesome')
 
@@ -59,7 +63,11 @@ export class App extends Component {
               America's Craft Beer <br/> and Breweries 
             </li>    
          
-            <li className='Right Top'> About </li>
+            <li className='Right Top'>
+              <Link to="/About"> 
+                About 
+              </Link>  
+            </li>
             <li className='Right Top'> Contact </li>
             <li className='Right Top'> Home </li>
           </ul>
@@ -74,5 +82,6 @@ export class App extends Component {
     )
   }
 }
+
 
 
