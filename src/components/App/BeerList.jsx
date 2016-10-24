@@ -12,11 +12,11 @@ class BeerList extends Component {
       const ibuMaxDetails = beer.ibuMax || (beer.style && beer.style.ibuMax)
       const abvMinDetails = beer.abvMin || (beer.style && beer.style.abvMin)
       const abvMaxDetails = beer.abvMax || (beer.style && beer.style.abvMax)
-      const beerLogo = beer.icon || (beer.labels && beer.labels.icon)
+      const beerLogo = beer.icon || (beer.labels && beer.labels.large)
 
       let logoStyle = {
-        height: 80,
-        width: 80
+        height: 250,
+        width: 250
       }
 
       return <div key={`${beer.name}-${index}`}><h3>{beer.name} </h3>

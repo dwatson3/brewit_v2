@@ -24,13 +24,13 @@ class LocationSearch extends Component {
       <div className='Location-search-form'>
         <input
           type='text'
-          placeholder='Search Beers by a Location Near You'
+          placeholder='Search For Craft Breweries by Zipcode'
           onChange={(e) => {
             this.setState({ value: e.currentTarget.value })
           }}
         />
-        <button onClick={this.handleClick}>Search</button>
-        <button onClick={this.handleClear}>Clear</button>
+        <button onClick={this.handleClick} className='location-search'>Search</button>
+        <button onClick={this.handleClear} className='location-search-clear'>Clear</button>
       </div>
       )
   }

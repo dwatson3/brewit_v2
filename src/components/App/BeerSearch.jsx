@@ -27,20 +27,22 @@ class BeerSearch extends Component {
       <div className='Beer-search-form'>
         <input
           type='text'
+          id='beer-search'
           value={value}
-          placeholder='Search for Craft Beers Here'
+          placeholder='Search for Craft Beers By Name'
           onChange={(e) => {
             this.setState({ value: e.currentTarget.value })
           }}
         />
-        <button onClick={this.handleClick}>Search</button>
-        <button onClick={this.handleClear}>Clear</button>
-        <ButtonToolbar>
-        <Button bsStyle="success" bsSize="large">Success</Button>  
-        </ButtonToolbar>
+        <button onClick={this.handleClick} className='beer-search'>Search</button>
+        <button onClick={this.handleClear} className='beer-search-clear'>Clear</button>
       </div>
     )
   }
 }
 
 export default BeerSearch
+
+        // <ButtonToolbar>
+        // <Button bsStyle="success" bsSize="large">Success</Button>  
+        // </ButtonToolbar>

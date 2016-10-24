@@ -1,0 +1,74 @@
+.Container {
+  // background-color: #3B2813;
+  background-color: #fff;
+  height: 100%;
+  margin: 0;
+}
+
+.FlexContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  -webkit-flex-direction: row;
+}
+
+ul.LeftFlexContainer {
+  background-color: #FFAF53;
+  height: 60px;
+  list-style-type: none;
+  flex-grow: 1;
+  min-width: 100%;
+  // padding-right: 20px;
+}
+
+.LeftFlexContainer li {
+  display: inline;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 36px;
+  // color: #fff;
+}
+
+.Left {
+  float: left;
+}
+
+.Right {
+  float: right;
+  padding-left: 40px;
+}
+
+.Beer-search-form {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 60px;
+}
+
+.Beer-search-form input, .Location-search-form input {
+  height: 30px;
+  width: 300px;
+  padding-left: 10px;
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.Location-search-form {
+  text-align: center;
+}
+
+// .Location-search-form input {
+//   height: 30px;
+//   width: 250px;
+// }
+
+.beer-search, .location-search {
+  position: relative;
+  left: 10px;
+}
+
+.beer-search-clear, .location-search-clear {
+  position: relative;
+  left: 20px;
+}

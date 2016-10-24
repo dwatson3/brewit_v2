@@ -2,7 +2,7 @@
 import React, {Component} from 'react'
 import request from 'superagent'
 import suitClassNames from 'suitcss-classnames'
-import './styles.scss'
+import './css/styles.scss'
 
 import BeerList from './BeerList'
 import BreweryList from './BreweryList'
@@ -47,12 +47,24 @@ export class App extends Component {
     const { breweries } = this.state
 
     return (
-      <div className={appClasses}>
-        <div className={titleClasses}>Brew It </div>
+      <div className='Container'>
+      {/* <div className={appClasses}> */}
+      <div>
+        <div className='FlexContainer'>  
+          <ul className='LeftFlexContainer'>
+            {/* <li className={titleClasses}>Brew It </li> */}
+            <li className='Left'> Brew It </li>
+            <li className='Right'> About </li>
+            <li className='Right'> Contact </li>
+            <li className='Right'> Home </li>
+          </ul>
+        </div>  
+
         <BeerSearch onChange={this.handleBeerChange} />
         <BeerList beers={beers} />
         <LocationSearch onChange={this.handleBreweryChange} />
         <BreweryList breweries={breweries} />
+      </div>
       </div>
     )
   }
