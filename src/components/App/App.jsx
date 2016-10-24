@@ -13,6 +13,7 @@ import Normalize from './Normalize.css'
 
 import { Label, DropdownButton, MenuItem, Form, Button } from 'react-bootstrap' 
 
+var FontAwesome = require('react-fontawesome')
 
 require('./App.scss')
 
@@ -53,10 +54,14 @@ export class App extends Component {
         <div className='FlexContainer'>  
           <ul className='LeftFlexContainer'>
             {/* <li className={titleClasses}>Brew It </li> */}
-            <li className='Left'> Brew It </li>
-            <li className='Right'> About </li>
-            <li className='Right'> Contact </li>
-            <li className='Right'> Home </li>
+            <li className='Left Title'> Brew It</li>
+            <li className='Left Subtitle'> Discover and Find
+              America's Craft Beer <br/> and Breweries 
+            </li>    
+         
+            <li className='Right Top'> About </li>
+            <li className='Right Top'> Contact </li>
+            <li className='Right Top'> Home </li>
           </ul>
         </div>  
 

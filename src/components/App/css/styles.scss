@@ -16,7 +16,7 @@
 
 ul.LeftFlexContainer {
   background-color: #FFAF53;
-  height: 60px;
+  height: 100px;
   list-style-type: none;
   flex-grow: 1;
   min-width: 100%;
@@ -26,18 +26,34 @@ ul.LeftFlexContainer {
 .LeftFlexContainer li {
   display: inline;
   font-family: Impact, Charcoal, sans-serif;
-  font-size: 36px;
+  font-size: 16px;
   // color: #fff;
+  padding-top: 5px;
 }
 
 .Left {
   float: left;
 }
 
+.Subtitle {
+  position: relative;
+  top: 50px;
+  right: 100px;
+  // text-align: center;
+}
+
 .Right {
   float: right;
   padding-left: 40px;
   padding-right: 20px;
+}
+
+li.Right.Top {
+  padding-top: 20px;
+}
+
+li.Left.Title {
+  font-size: 36px;
 }
 
 .Beer-search-form {

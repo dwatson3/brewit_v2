@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import request from 'superagent'
 import { Label, DropdownButton, MenuItem, Form, Button, ButtonToolbar } from 'react-bootstrap' 
+// var FontAwesome = require('react-fontawesome')
+
+// import FaSearch from 'react-icons/fa/search'
+// var FaSearch = require('react-icons/lib/fa/search')
 
 class BeerSearch extends Component {
   constructor (props, context) {
@@ -34,7 +38,8 @@ class BeerSearch extends Component {
             this.setState({ value: e.currentTarget.value })
           }}
         />
-        <button onClick={this.handleClick} className='beer-search'>Search</button>
+        <button onClick={this.handleClick} className='beer-search'> 
+          Search</button>
         <button onClick={this.handleClear} className='beer-search-clear'>Clear</button>
       </div>
     )
