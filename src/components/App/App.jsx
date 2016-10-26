@@ -69,7 +69,11 @@ export class App extends Component {
               </Link>  
             </li>
             <li className='Right Top'> Contact </li>
-            <li className='Right Top'> Home </li>
+            <li className='Right Top'> 
+              <Link to="/">
+                Home 
+              </Link>
+            </li>
           </ul>
         </div>  
 
@@ -82,6 +86,5 @@ export class App extends Component {
     )
   }
 }
-
 
 
