@@ -16,6 +16,7 @@ import Normalize from './Normalize.css'
 import { Label, DropdownButton, MenuItem, Form, Button } from 'react-bootstrap' 
 
 import About from './About'
+import Contact from './Contact'
 
 var FontAwesome = require('react-fontawesome')
 
@@ -68,7 +69,11 @@ export class App extends Component {
                 About 
               </Link>  
             </li>
-            <li className='Right Top'> Contact </li>
+            <li className='Right Top'> 
+              <Link to='/Contact'>
+                Contact 
+              </Link>  
+            </li>
             <li className='Right Top'> 
               <Link to="/">
                 Home 

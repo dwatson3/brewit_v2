@@ -91,3 +91,28 @@ li.Left.Title {
   position: relative;
   left: 20px;
 }
+
+// CSS for BreweryList File
+.BreweryListContainer {
+  margin: 0 auto;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.BreweryInfo {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 20px;
+  justify: left-justify;
+}
+
+// CSSS for Contact Component
+.Contact-Container {
+  margin: 0 auto;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.Contact {
+  padding-bottom: 20px;
+}
