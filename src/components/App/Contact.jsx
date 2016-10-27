@@ -39,7 +39,7 @@ export class Contact extends Component {
         <div className='Contact-Container'>
           <h3 className='Contact'> Contact </h3>
           <p> Hello! My name is Daphne, and I'm a Front-End Engineer. </p>
-          <p> Thanks for checking out Brew-It! I hope you discovered a new
+          <p> Thanks for checking out Brew-It. I hope you discovered a new
             craft beer to try.<br />
                 Feel free to check out my code for Brew-It on
             <a href={'https://github.com/dwatson3/brewit_v2'}> Github. </a>
