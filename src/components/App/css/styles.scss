@@ -16,7 +16,9 @@
 
 ul.LeftFlexContainer {
   background-color: #E88140;
-  height: 100px;
+  font-family: 'Open Sans', sans-serif;
+  height: 130px;
+  
   list-style-type: none;
   flex-grow: 1;
   min-width: 100%;
@@ -25,11 +27,19 @@ ul.LeftFlexContainer {
 
 .LeftFlexContainer li {
   display: inline;
-  font-family: Impact, Charcoal, sans-serif;
-  font-size: 16px;
-  // color: #fff;
+  // font-family: 'Bungee Shade', cursive;
+  color: #fff;
+  font-size: 18px;
+  // color: #FFEACC;
   letter-spacing: 1px;
   padding-top: 5px;
+
+}
+
+.Title {
+  color: #fff;
+  font-family: 'Bungee Shade', cursive;
+  // font-size: 48px;
 }
 
 .Left {
@@ -38,9 +48,19 @@ ul.LeftFlexContainer {
 
 .Subtitle {
   position: relative;
-  top: 50px;
-  right: 110px;
+  top: 80px;
+  right: 290px;
   // text-align: center;
+}
+
+.PageLink a:link, a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.PageLink a:hover {
+  color: #5D5E5E;
+  text-decoration: none;
 }
 
 .Right {
@@ -53,13 +73,18 @@ li.Right.Top {
   padding-top: 20px;
 }
 
+.Home {
+  position: relative;
+  bottom: 30px;
+}
+
 li.Left.Title {
-  font-size: 36px;
+  font-size: 55px;
 }
 
 .Beer-search-form {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   padding-top: 60px;
 }
 
@@ -68,9 +93,16 @@ li.Left.Title {
   width: 300px;
   padding-left: 10px;
 
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  border: 3px solid #4CB2AD;
+}
+
+.Placeholder {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  position: relative;
+  bottom: 5px;
+  right: 120px;
+
 }
 
 .Location-search-form {
@@ -85,9 +117,21 @@ li.Left.Title {
 .beer-search, .location-search {
   position: relative;
   left: 10px;
+
+  background-color: #4CB2AD;
+  border: 1px solid #4CB2AD;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  height: 30px;
+  width: 70px;
 }
 
 .beer-search-clear, .location-search-clear {
+  border: none;
+  background: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   position: relative;
   left: 20px;
 }
@@ -133,4 +177,21 @@ li.Left.Title {
 
 .About {
   // padding-bottom: 20px;
+}
+
+// CSS SearchTour Component
+.SearchContainer {
+  position: relative;
+  bottom: 160px;
+  left: 30px;
+}
+
+.SearchLogo {
+  font-family: 'Bungee', cursive;
+  font-size: 40px;
+  color: #5D5E5E;
+}
+
+.SearchSubtitle {
+  font-family: 'Open Sans', sans-serif;
 }

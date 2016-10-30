@@ -4,6 +4,7 @@ import { App } from './components/App/App.jsx'
 import { Router, Route, browserHistory } from 'react-router'
 import { About } from './components/App/About.jsx'
 import { Contact } from './components/App/Contact.jsx'
+import { SearchTour } from './components/App/SearchTour.jsx'
 
 const rootNode = document.getElementById('appRoot')
 

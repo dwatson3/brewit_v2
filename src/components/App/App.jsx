@@ -8,6 +8,7 @@ import BeerList from './BeerList'
 import BreweryList from './BreweryList'
 import BeerSearch from './BeerSearch'
 import LocationSearch from './LocationSearch'
+import SearchTour from './SearchTour'
 
 import createBrowserHistory from 'history/lib/createBrowserHistory'
 import { Router, Route, Link, IndexRoute } from 'react-router'
@@ -61,20 +62,20 @@ export class App extends Component {
             {/* <li className={titleClasses}>Brew It </li> */}
             <li className='Left Title'> Brew It</li>
             <li className='Left Subtitle'> Discover and Find
-              America's Craft Beer <br/> and Breweries 
+              America's Craft Beer and Breweries 
             </li>    
          
-            <li className='Right Top'>
+            <li className='Right Top PageLink'>
               <Link to="/About"> 
                 About 
               </Link>  
             </li>
-            <li className='Right Top'> 
+            <li className='Right Top PageLink'> 
               <Link to='/Contact'>
                 Contact 
               </Link>  
             </li>
-            <li className='Right Top'> 
+            <li className='Right Top PageLink Home'> 
               <Link to="/">
                 Home 
               </Link>
@@ -83,9 +84,10 @@ export class App extends Component {
         </div>  
 
         <BeerSearch onChange={this.handleBeerChange} />
+        <LocationSearch hidden={(beers.length > 0)} onChange={this.handleBreweryChange} />
         <BeerList beers={beers} />
-        <LocationSearch onChange={this.handleBreweryChange} />
         <BreweryList breweries={breweries} />
+        <SearchTour />
       </div>
       </div>
     )

@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+// import LocationSearch from './LocationSearch'
+// import BeerSearch from './BeerSearch'
 
 class BeerList extends Component {
   render () {
@@ -19,18 +21,26 @@ class BeerList extends Component {
         width: 250
       }
 
-      return <div key={`${beer.name}-${index}`}><h3>{beer.name} </h3>
-        <span> <img src={beerLogo} style={logoStyle} /> </span>
-        <span> { description } </span> <br />
-        <span>{beer.isOrganic === 'Y' ? 'Organic' : 'Not Organic'}</span> <br />
-        <span> {ibuMinDetails}, {ibuMaxDetails} </span> <br />
-        <span> {abvMinDetails}, {abvMaxDetails} </span>
-      </div>
+      return (
+        <div key={`${beer.name}-${index}`}><h3>{beer.name} </h3>
+          <div id='#top' />
+          <span> <img src={beerLogo} style={logoStyle} /> </span>
+          <span> { description } </span> <br />
+          <span>{beer.isOrganic === 'Y' ? 'Organic' : 'Not Organic'}</span> <br />
+          <span> {ibuMinDetails}, {ibuMaxDetails} </span> <br />
+          <span> {abvMinDetails}, {abvMaxDetails} </span>
+        </div>
+      )
     })
+
+    let topofPageLink = (beerList.length > 0 ? <a href={'#top'}>Return to Top</a> : <div />)
 
     return (
       <div>
+        <div>
         {beerList}
+        </div>
+        {topofPageLink}
       </div>
     )
   }

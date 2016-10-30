@@ -22,22 +22,30 @@ class LocationSearch extends Component {
     this.setState({incorrect: true})
     }
   }
+  // const hidden = {
+  //   display: 'none'
+  // }
   handleClear = () => {
     this.props.onChange([])
     this.setState({value : '', incorrect: false})
   }
   render () {
     const { value } = this.state
+    const { hidden } = this.props
     let incorrectBox = null;
     if (this.state.incorrect) {
       incorrectBox = <div> Please Enter a 5-digit Zipcode</div>
     }
+    const formStyle = {
+      float: hidden ? 'center' : 'none'
+    }
     return (
-      <div className='Location-search-form'>
+      <div className='Location-search-form' style={formStyle}>
+        <div className='Placeholder'>Breweries by Zipcode</div>
         <input
           type='text'
           id='location-search'
-          placeholder='Search For Craft Breweries by Zipcode'
+          placeholder=''
           value={value}
           onChange={(e) => {
             this.setState({ value: e.currentTarget.value })

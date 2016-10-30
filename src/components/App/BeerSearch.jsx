@@ -42,11 +42,12 @@ class BeerSearch extends Component {
     }
     return (
       <div className='Beer-search-form'>
+        <div className='Placeholder'>Craft Beers By Name</div>
         <input
           type='text'
           id='beer-search'
           value={value}
-          placeholder='Search for Craft Beers By Name'
+          placeholder=''
           onChange={(e) => {
             this.setState({ value: e.currentTarget.value })
           }}
