@@ -1,8 +1,26 @@
+@media(min-width:400px) {
+
+}
+
+@media(min-width:597px) {
+  
+}
+
+@media(min-width:700px) {
+  
+}
+
+@media(min-width:890px) {
+  
+}
+
+@media(max-width:1170px) {
+}
+
 .Container {
-  // background-color: #3B2813;
   background-color: #fff;
   height: 100%;
-  width: 100%;
+  width: 80%;
   margin: 0;
 }
 
@@ -22,24 +40,20 @@ ul.LeftFlexContainer {
   list-style-type: none;
   flex-grow: 1;
   min-width: 100%;
-  // padding-right: 20px;
+
 }
 
 .LeftFlexContainer li {
   display: inline;
-  // font-family: 'Bungee Shade', cursive;
   color: #fff;
   font-size: 18px;
-  // color: #FFEACC;
   letter-spacing: 1px;
   padding-top: 5px;
-
 }
 
 .Title {
   color: #fff;
   font-family: 'Bungee Shade', cursive;
-  // font-size: 48px;
 }
 
 .Left {
@@ -50,6 +64,7 @@ ul.LeftFlexContainer {
   position: relative;
   top: 80px;
   right: 290px;
+  // display: block;
   // text-align: center;
 }
 
@@ -63,20 +78,20 @@ ul.LeftFlexContainer {
   text-decoration: none;
 }
 
-.Right {
-  float: right;
-  padding-left: 40px;
-  padding-right: 20px;
+.Right a {
+  float: right; 
+  padding: 20px;
+  // padding-right: 30px;
 }
 
 li.Right.Top {
   padding-top: 20px;
 }
 
-.Home {
-  position: relative;
-  bottom: 30px;
-}
+// .Home {
+//   position: relative;
+//   bottom: 30px;
+// }
 
 li.Left.Title {
   font-size: 55px;
@@ -154,36 +169,43 @@ li.Left.Title {
 .Contact-Container {
   margin: 0 auto;
   padding-top: 60px;
+  padding-left: 30%;
+  padding-right: 30%;
   text-align: center;
 }
 
-.Contact {
-  padding-bottom: 20px;
+.Contact-Container p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
 }
+  
+  .Contact, .About {
+    font-family: 'Bungee', cursive;
+    font-size: 36px;
+    padding-bottom: 20px;
+  }
+
 
 // CSS for About Component
 .About-Container {
+  font-size: 18px;
   margin: 0 auto;
   padding-top: 60px;
   text-align: center;
+  padding-left: 30%;
+  padding-right: 30%;
 }
 
-.AboutInfo {
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 20px;
-  justify: left-justify;
-}
-
-.About {
-  // padding-bottom: 20px;
+.About-SubTitle {
+  font-size: 24px;
 }
 
 // CSS SearchTour Component
 .SearchContainer {
-  position: relative;
-  bottom: 160px;
-  left: 30px;
+  // position: relative;
+  // bottom: 160px;
+  // left: 30px;
+  text-align: center;
 }
 
 .SearchLogo {
@@ -193,5 +215,10 @@ li.Left.Title {
 }
 
 .SearchSubtitle {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a.PortfolioLink {
+  color: #4CB2AD;
   font-family: 'Open Sans', sans-serif;
 }

@@ -64,30 +64,32 @@ export class App extends Component {
             <li className='Left Subtitle'> Discover and Find
               America's Craft Beer and Breweries 
             </li>    
-         
-            <li className='Right Top PageLink'>
+
+            <div className='Right'>
+            <li className='Top PageLink'>
               <Link to="/About"> 
                 About 
               </Link>  
             </li>
-            <li className='Right Top PageLink'> 
+            <li className='Top PageLink'> 
               <Link to='/Contact'>
                 Contact 
               </Link>  
             </li>
-            <li className='Right Top PageLink Home'> 
+            <li className='Top PageLink Home'> 
               <Link to="/">
                 Home 
               </Link>
             </li>
+            </div>
           </ul>
-        </div>  
+        </div>
 
+        <SearchTour />
         <BeerSearch onChange={this.handleBeerChange} />
         <LocationSearch hidden={(beers.length > 0)} onChange={this.handleBreweryChange} />
         <BeerList beers={beers} />
         <BreweryList breweries={breweries} />
-        <SearchTour />
       </div>
       </div>
     )

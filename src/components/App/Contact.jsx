@@ -15,7 +15,7 @@ export class Contact extends Component {
             <ul className='LeftFlexContainer'>
               <li className='Left Title'> Brew It</li>
               <li className='Left Subtitle'> Discover and Find
-                America's Craft Beer <br /> and Breweries
+                America's Craft Beer and Breweries
               </li>
               <li className='Right Top'>
                 <Link to='/About'>
@@ -37,19 +37,18 @@ export class Contact extends Component {
         </div>
 
         <div className='Contact-Container'>
-          <h3 className='Contact'> Contact </h3>
-          <p> Hello! My name is Daphne, and I'm a Front-End Engineer. </p>
-          <p> Thanks for checking out Brew-It. I hope you discovered a new
-            craft beer to try.<br />
+          <div className='Contact'> Contact </div>
+          <p> Hello! <br /> My name is Daphne, and I'm a Front-End Engineer. 
+            Thanks for checking out Brew-It, and I hope you discovered a new
+            craft beer to try.
                 Feel free to check out my code for Brew-It on
-            <a href={'https://github.com/dwatson3/brewit_v2'}> Github. </a>
-          </p>
-          <p> You can also visit my
-            <a href={'http://www.daphnewatson.com/'}> website, </a>
+            <a href={'https://github.com/dwatson3/brewit_v2'} className='PortfolioLink'> Github. </a>
+              You can also visit my
+            <a href={'http://www.daphnewatson.com/'} className='PortfolioLink'> website, </a>
              or find me on
-            <a href={'https://www.linkedin.com/in/daphnewatson'}> LinkedIn </a>
+            <a href={'https://www.linkedin.com/in/daphnewatson'} className='PortfolioLink'> LinkedIn </a>
              or
-            <a href={'https://twitter.com/daphnewsf'}> Twitter. </a>
+            <a href={'https://twitter.com/daphnewsf'} className='PortfolioLink'> Twitter. </a>
           </p>
         </div>
       </div>
