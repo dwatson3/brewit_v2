@@ -34,6 +34,7 @@
 
 ul.LeftFlexContainer {
   background-color: #E88140;
+  display: flex;
   font-family: 'Open Sans', sans-serif;
   height: 130px;
   
@@ -64,8 +65,6 @@ ul.LeftFlexContainer {
   position: relative;
   top: 80px;
   right: 290px;
-  // display: block;
-  // text-align: center;
 }
 
 .PageLink a:link, a:visited {
@@ -81,17 +80,11 @@ ul.LeftFlexContainer {
 .Right a {
   float: right; 
   padding: 20px;
-  // padding-right: 30px;
 }
 
 li.Right.Top {
   padding-top: 20px;
 }
-
-// .Home {
-//   position: relative;
-//   bottom: 30px;
-// }
 
 li.Left.Title {
   font-size: 55px;
@@ -123,11 +116,6 @@ li.Left.Title {
 .Location-search-form {
   text-align: center;
 }
-
-// .Location-search-form input {
-//   height: 30px;
-//   width: 250px;
-// }
 
 .beer-search, .location-search {
   position: relative;
@@ -182,6 +170,7 @@ li.Left.Title {
   .Contact, .About {
     font-family: 'Bungee', cursive;
     font-size: 36px;
+    color: #5D5E5E;
     padding-bottom: 20px;
   }
 
@@ -202,10 +191,8 @@ li.Left.Title {
 
 // CSS SearchTour Component
 .SearchContainer {
-  // position: relative;
-  // bottom: 160px;
-  // left: 30px;
   text-align: center;
+  padding-top: 60px;
 }
 
 .SearchLogo {
@@ -221,4 +208,21 @@ li.Left.Title {
 a.PortfolioLink {
   color: #4CB2AD;
   font-family: 'Open Sans', sans-serif;
+}
+
+.BeerSearchResults {
+  text-align: center;
+}
+
+// ul.BeerSearchResults li {
+//   display: inline;
+//   // margin: 0 auto;
+// }
+
+// li .BeerSearchResults {
+//   display: inline;
+// }
+
+.BeerName {
+  padding-left: 20px;
 }

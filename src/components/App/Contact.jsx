@@ -17,21 +17,24 @@ export class Contact extends Component {
               <li className='Left Subtitle'> Discover and Find
                 America's Craft Beer and Breweries
               </li>
-              <li className='Right Top'>
+
+              <div className='Right'>
+              <li className='Top'>
                 <Link to='/About'>
                   About
                 </Link>
               </li>
-              <li className='Right Top'>
+              <li className='Top'>
                 <Link to='/Contact'>
                   Contact
                 </Link>
               </li>
-              <li className='Right Top'>
+              <li className='Top'>
                 <Link to='/'>
                   Home
                 </Link>
               </li>
+              </div>
             </ul>
           </div>
         </div>

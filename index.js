@@ -11,7 +11,8 @@ const config = require('./webpack.config')
 const compiler = webpack(config)
 
 app.use(webpackDevMiddleware(compiler, { stats: { colors: true } }))
-// app.use('/api', api)
+
+app.use('/images', express.static('Images'))
 
 app.get('/beers', function (req, res) {
   // eventually, we will call a function like getBreweryDb to make an API
