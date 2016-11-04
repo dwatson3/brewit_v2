@@ -9,7 +9,7 @@
     "karma": "BABEL_ENV='test' karma start",
     "test": "BABEL_ENV='test' karma start --single-run --reporters mocha",
     "pretest": "npm run build",
-    "build": "npm run lint && webpack --progress --colors",
+    "build": "npm run lint && webpack --progress --colors --config",
     "lint": "standard",
     "prepush": "npm test"
   },

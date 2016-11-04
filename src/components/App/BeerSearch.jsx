@@ -60,7 +60,3 @@ class BeerSearch extends Component {
 }
 
 export default BeerSearch
-
-        // <ButtonToolbar>
-        // <Button bsStyle="success" bsSize="large">Success</Button>  
-        // </ButtonToolbar>

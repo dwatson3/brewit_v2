@@ -9,7 +9,7 @@ class LocationSearch extends Component {
       incorrect: false
     }
   }
-  handleClick (e) {
+  handleClick = (e) => {
     const { value } = this.state
     if (value.match(/^\d{5}$/)) {
       request.get(`/breweries?location=${value}`)
@@ -25,9 +25,9 @@ class LocationSearch extends Component {
   // const hidden = {
   //   display: 'none'
   // }
-  handleClear () {
+  handleClear = () => {
     this.props.onChange([])
-    this.setState({value : '', incorrect: false})
+    this.setState({ value : '', incorrect: false})
   }
   render () {
     const { value } = this.state

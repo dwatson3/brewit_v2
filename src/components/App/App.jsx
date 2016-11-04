@@ -24,7 +24,7 @@ export class App extends Component {
     super(props, context)
     this.state = {
       beers: [],
-      breweries: [],
+      breweries: []
     }
   }
   classNames (options) {
@@ -40,7 +40,7 @@ export class App extends Component {
   }
 
   handleBreweryChange (list) {
-    this.setState({ breweries: list})
+    this.setState({breweries: list})
   }
 
   render () {
@@ -94,5 +94,4 @@ export class App extends Component {
     )
   }
 }
-
 
