@@ -14,8 +14,8 @@ import SearchTour from './SearchTour'
 import { Link } from 'react-router'
 // import Normalize from './Normalize.css'
 
-import About from './About'
-import Contact from './Contact'
+// import About from './About'
+// import Contact from './Contact'
 
 require('./App.scss')
 
