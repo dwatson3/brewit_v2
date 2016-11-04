@@ -14,7 +14,7 @@ export class About extends Component {
                 <span className='TitleText'>
                   Brew It <br />
                 </span>
-                  Find and Discover America's Craft Beer and Breweries  
+                  Find and Discover America's Craft Beer and Breweries
               </li>
 
               <li className='Top PageLink'>

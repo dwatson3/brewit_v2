@@ -9,7 +9,7 @@ class LocationSearch extends Component {
       incorrect: false
     }
   }
-  handleClick = (e) => {
+  handleClick (e) {
     const { value } = this.state
     if (value.match(/^\d{5}$/)) {
       request.get(`/breweries?location=${value}`)
@@ -25,14 +25,14 @@ class LocationSearch extends Component {
   // const hidden = {
   //   display: 'none'
   // }
-  handleClear = () => {
+  handleClear () {
     this.props.onChange([])
     this.setState({value : '', incorrect: false})
   }
   render () {
     const { value } = this.state
     const { hidden } = this.props
-    let incorrectBox = null;
+    let incorrectBox = null
     if (this.state.incorrect) {
       incorrectBox = <div> Please Enter a 5-digit Zipcode</div>
     }

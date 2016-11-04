@@ -11,7 +11,7 @@ class BeerList extends Component {
     const beerList = beers.filter((beer) => !!beer.description || !!beer.style).map((beer, index) => {
       // console.log(beer, beer.description, beer.style, "\n")
       // if (!beer.style) debugger
-      const description = beer.description || beer.style.description   
+      const description = beer.description || beer.style.description
       const ibuMinDetails = beer.ibuMin || (beer.style && beer.style.ibuMin)
       const ibuMaxDetails = beer.ibuMax || (beer.style && beer.style.ibuMax)
       const abvMinDetails = beer.abvMin || (beer.style && beer.style.abvMin)
@@ -35,7 +35,7 @@ class BeerList extends Component {
               </div>
 
               <div className='SecondColumn'>
-                <h3 className='BeerName'>{beer.name}</h3>  
+                <h3 className='BeerName'>{beer.name}</h3>
                 <div className='Available'>Available at: {brewerystuffs}</div>
                 {ibu}
                 {abv}
