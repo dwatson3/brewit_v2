@@ -20,9 +20,10 @@ app.get('/beers', function (req, res) {
   console.log(req.query)
   request
     // .get(`http://api.brewerydb.com/v2/beers/oeGSxs?key=${key}`)
-    .get(`http://api.brewerydb.com/v2/search?q=${req.query.name}&type=beer&key=${key}`)
+    .get(`http://api.brewerydb.com/v2/search?q=${req.query.name}&type=beer&key=${key}&withBreweries=Y`)
     .end((err, result) => {
       if (err) throw new Error(err)
+      // issue parallel requests to /beers/<beerId>/breweries
 
       res.send(result)
     })

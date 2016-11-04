@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Router, Route, Link } from 'react-router'
+import { Link } from 'react-router'
 
 import './css/styles.scss'
 
@@ -10,34 +10,37 @@ export class About extends Component {
         <div>
           <div className='FlexContainer'>
             <ul className='LeftFlexContainer'>
-              <li className='Left Title'> Brew It</li>
-              <li className='Left Subtitle'> Discover and Find
-                America's Craft Beer and Breweries
+              <li className='Title'>
+                <span className='TitleText'>
+                  Brew It <br />
+                </span>
+                  Find and Discover America's Craft Beer and Breweries  
               </li>
 
-              <div className='Right'>
-              <li className='Top'>
+              <li className='Top PageLink'>
                 <Link to='/About'>
                   About
                 </Link>
               </li>
-              <li className='Top'>
+
+              <li className='Top PageLink'>
                 <Link to='/Contact'>
                   Contact
                 </Link>
               </li>
-              <li className='Top'>
+
+              <li className='Top PageLink Home'>
                 <Link to='/'>
                   Home
                 </Link>
               </li>
-              </div>
+
             </ul>
           </div>
         </div>
         <div className='About-Container'>
           <h3 className='About'>About</h3>
-           <div className='About-SubTitle'>Inspiration Behind Brew-It</div> <br />
+          <div className='About-SubTitle'>Inspiration Behind Brew-It</div> <br />
           <p className='AboutInfo'>
           I created Brew-It as a way to discover and learn
           more about craft beers. Alot of friends around me seemed to

@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import request from 'superagent'
 import { Label, DropdownButton, MenuItem, Form, Button, ButtonToolbar } from 'react-bootstrap' 
-// var FontAwesome = require('react-fontawesome')
-
-// import FaSearch from 'react-icons/fa/search'
-// var FaSearch = require('react-icons/lib/fa/search')
 
 class BeerSearch extends Component {
   constructor (props, context) {
@@ -17,10 +13,12 @@ class BeerSearch extends Component {
   handleClick = (e) => {
     const { value } = this.state
     if (value.match(/^[a-zA-Z0-9\s]+$/)) {
-      request.get(`/beers?name=${value}`)
+      request.get(`/beers?name=${value}&withBreweries=Y`)
         .end((err, result) => {
           if (err) throw new Error(err)
           this.props.onChange(JSON.parse(result.body.text).data)
+          // console.log(result)
+          console.log(JSON.parse(result.body.text))
           this.setState({incorrect: false})
         })
     } else {

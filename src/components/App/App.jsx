@@ -60,28 +60,31 @@ export class App extends Component {
         <div className='FlexContainer'>  
           <ul className='LeftFlexContainer'>
             {/* <li className={titleClasses}>Brew It </li> */}
-            <li className='Left Title'> Brew It</li>
-            <li className='Left Subtitle'> Discover and Find
-              America's Craft Beer and Breweries 
-            </li>    
+            <li className='Title'> 
+            <span className='TitleText'>
+            Brew It <br />
+            </span>
+                Find and Discover America's Craft Beer and Breweries  
+              </li>  
 
-            <div className='Right'>
             <li className='Top PageLink'>
-              <Link to="/About"> 
+              <Link to='/About'> 
                 About 
               </Link>  
             </li>
+
             <li className='Top PageLink'> 
               <Link to='/Contact'>
                 Contact 
               </Link>  
             </li>
+
             <li className='Top PageLink Home'> 
-              <Link to="/">
+              <Link to='/'>
                 Home 
               </Link>
             </li>
-            </div>
+
           </ul>
         </div>
 

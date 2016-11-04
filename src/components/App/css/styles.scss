@@ -1,26 +1,7 @@
-@media(min-width:400px) {
-
-}
-
-@media(min-width:597px) {
-  
-}
-
-@media(min-width:700px) {
-  
-}
-
-@media(min-width:890px) {
-  
-}
-
-@media(max-width:1170px) {
-}
-
 .Container {
   background-color: #fff;
   height: 100%;
-  width: 80%;
+  width: 100%;
   margin: 0;
 }
 
@@ -45,16 +26,20 @@ ul.LeftFlexContainer {
 }
 
 .LeftFlexContainer li {
-  display: inline;
   color: #fff;
   font-size: 18px;
   letter-spacing: 1px;
   padding-top: 5px;
 }
 
-.Title {
+li.Title {
+  flex: 0 0 600px;
+}
+
+span.TitleText {
   color: #fff;
   font-family: 'Bungee Shade', cursive;
+  font-size: 36px;
 }
 
 .Left {
@@ -65,6 +50,11 @@ ul.LeftFlexContainer {
   position: relative;
   top: 80px;
   right: 290px;
+}
+
+.PageLink {
+  flex: 1 0;
+  padding-right: 20px;
 }
 
 .PageLink a:link, a:visited {
@@ -87,7 +77,7 @@ li.Right.Top {
 }
 
 li.Left.Title {
-  font-size: 55px;
+  font-size: 36px;
 }
 
 .Beer-search-form {
@@ -211,8 +201,46 @@ a.PortfolioLink {
 }
 
 .BeerSearchResults {
-  text-align: center;
+  // padding-left: 60px;
+  // padding-right: 80px;
+  // padding-bottom: 50px;
+  margin-top: 40px;
+  display: flex;
+  // flex-direction: column;
+  // max-width: 60%;
 }
+
+.BeerSearchDesc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+.SubDescription {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+.LogoStyle {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  position: relative;
+  padding-top: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.FirstColumn {
+  // flex-direction: column;
+  flex: 1 0;
+}
+
+.SecondColumn {
+  // flex-direction: column;
+  flex: 3 0;
+}
+
+// ********** BeerList Component CSS  *********
 
 // ul.BeerSearchResults li {
 //   display: inline;
@@ -224,5 +252,46 @@ a.PortfolioLink {
 // }
 
 .BeerName {
-  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.BeerName {
+  // padding-left: 20px;
+  // float: right;
+  // position: relative;
+  // right: 40%;
+  // top: 20px;
+}
+
+.Available {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.ABVinfo, .IBVinfo {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.OrganicOption {
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+span.Option {
+  font-style: normal;
+  padding-left: 5px;
+  margin-top: 5px;
+}
+
+.Righty {
+  float: right;
+  top: 60px;
+}
+
+.Test li {
+  // display: inline;
 }

@@ -8,7 +8,6 @@ class BeerList extends Component {
   render () {
     const { beers } = this.props
 
-
     const beerList = beers.filter((beer) => !!beer.description || !!beer.style).map((beer, index) => {
       // console.log(beer, beer.description, beer.style, "\n")
       // if (!beer.style) debugger
@@ -19,28 +18,41 @@ class BeerList extends Component {
       const abvMaxDetails = beer.abvMax || (beer.style && beer.style.abvMax)
       const beerLogo = beer.icon || (beer.labels && beer.labels.large) || '/Images/brewit_stein-03.png'
       // const beerLogo = {beerLogoImg} || (beer.labels && beer.labels.large)
-      const abv = !!abvMinDetails ? <div> {abvMinDetails}, {abvMaxDetails} </div> : ''
-      const ibv = !!abvMinDetails ? <div> {abvMinDetails}, {abvMaxDetails} </div> : ''
-
-      let logoStyle = {
-        height: 250,
-        width: 250
-      }
+      const abv = !!abvMinDetails ? <div className='ABVinfo'> ABV range: {abvMinDetails} - {abvMaxDetails} </div> : ''
+      const ibu = !!ibuMinDetails ? <div className='IBVinfo'> IBV range: {ibuMinDetails} - {ibuMaxDetails} </div> : ''
+      const brewerystuffs = beer.breweries[0].name
+      // if (!beer.breweries[0].name) debugger
+      // console.log(beer.breweries[0].name)
 
       return (
         <div key={`${beer.name}-${index}`}>
-        <div>
-          <div id='#top' />      
-          <div className='BeerSearchResults'>
-              <h3 className='BeerName'>{beer.name}</h3>
-              <img src={beerLogo} style={logoStyle} /> 
-          <div> { description } </div>
-          <div>{beer.isOrganic === 'Y' ? 'Organic' : 'Not Organic'} </div>
-                {ibv}
+          <div>
+            <div id='#top' />
+            <div className='BeerSearchResults'>
+
+              <div className='FirstColumn'>
+                <img src={beerLogo} className='LogoStyle' />
+              </div>
+
+              <div className='SecondColumn'>
+                <h3 className='BeerName'>{beer.name}</h3>  
+                <div className='Available'>Available at: {brewerystuffs}</div>
+                {ibu}
                 {abv}
 
-        </div>  
-        </div>
+                <div className='Subdescription'>
+                  <div className='OrganicOption'> Organic beer?
+                    <span className='Option'>{beer.isOrganic === 'Y' ? 'Organic' : 'Not Organic'}</span>
+                  </div>
+                </div>
+
+                <div className='BeerSearchDesc'> { description } </div>
+
+                <div> {beer.category} </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       )
     })
