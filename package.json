@@ -5,13 +5,13 @@
   "author": "Daphne Watson",
   "license": "MIT",
   "scripts": {
-    "start": "[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\"; nvm use; echo \"NODE VERSION: `node -v`\"; node index.js",
+    "dev": "[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\"; nvm use; echo \"NODE VERSION: `node -v`\"; node index.js",
+    "start": "node production.js",
     "karma": "BABEL_ENV='test' karma start",
     "test": "BABEL_ENV='test' karma start --single-run --reporters mocha",
     "pretest": "npm run build",
-    "build": "npm run lint && webpack --progress --colors --config",
-    "lint": "standard",
-    "prepush": "npm test"
+    "build": "webpack --progress --colors",
+    "lint": "standard"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
