@@ -5,7 +5,8 @@ const express = require('express')
 const app = express()
 
 const request = require('superagent')
-const key = require('./config.json').api_secret_key
+
+const key = require(path.join(__dirname, './config.json')).api_secret_key
 
 app.use('/images', express.static('Images'))
 
