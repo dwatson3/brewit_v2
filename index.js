@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const request = require('superagent')
-const key = require('./config.json').api_secret_key
+// const key = require('./config.json').api_secret_key
 
 // const api = require('./server/api')
 
