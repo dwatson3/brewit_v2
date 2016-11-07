@@ -14,6 +14,8 @@ app.get('/dist', express.static('dist'))
 
 const path = require('path')
 
+app.set('port', (process.env.PORT || 3000))
+
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'dist/index.html'))
 })
@@ -52,6 +54,10 @@ app.get('/breweries', function (req, res) {
     })
 })
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(app.get('port'), function () {
+  console.log('App is running on 3000!', app.get('port'))
 })
+
+// app.listen(3000, function () {
+//   console.log('Example app listening on port 3000!')
+// })
