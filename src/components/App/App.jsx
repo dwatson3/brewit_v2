@@ -35,12 +35,12 @@ export class App extends Component {
     })
   }
 
-  handleBeerChange (list) {
+  handleBeerChange = (list) => {
     this.setState({ beers: list })
   }
 
-  handleBreweryChange (list) {
-    this.setState({breweries: list})
+  handleBreweryChange = (list) => {
+    this.setState({ breweries: list })
   }
 
   render () {
@@ -57,9 +57,9 @@ export class App extends Component {
             <ul className='LeftFlexContainer'>
             {/* <li className={titleClasses}>Brew It </li> */}
               <li className='Title'>
-              <span className='TitleText'>
-              Brew It <br />
-              </span>
+                <span className='TitleText'>
+                  Brew It <br />
+                </span>
                 Find and Discover America's Craft Beer and Breweries
               </li>
 
