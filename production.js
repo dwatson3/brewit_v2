@@ -10,18 +10,18 @@ const key = "e63ad44332232752dd66fb3afe5016a9"
 
 app.use('/images', express.static('Images'))
 
-app.get('/dist', express.static('dist'))
+app.use('/dist', express.static('dist'))
 
 const path = require('path')
 
 app.set('port', (process.env.PORT || 3000))
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'dist/index.html'))
+  res.sendFile(path.join('dist/index.html'))
 })
 
 app.get('/app.js', function(req, res) {
-  res.sendFile(path.join(__dirname, 'dist/app.js'))
+  res.sendFile(path.join('dist/app.js'))
 })
 
 app.get('/beers', function (req, res) {
