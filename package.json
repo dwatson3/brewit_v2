@@ -12,7 +12,7 @@
     "pretest": "npm run build",
     "build": "webpack --progress --colors",
     "lint": "standard",
-    "postinstall": "node run build"
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
