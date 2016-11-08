@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  context: path.join(__dirname, '/src'),
+  context: path.join(process.cwd(), '/src'),
   entry: {
     javascript: './index.jsx',
     html: './index.html'
@@ -9,7 +9,7 @@ module.exports = {
 
   output: {
     filename: 'app.js',
-    path: path.join(__dirname, '/dist')
+    path: path.join(process.cwd(), '/dist')
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.scss']
@@ -19,7 +19,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader?stage=0']
+        loaders: ['babel-loader']
       },
       {
         test: /\.html$/,
