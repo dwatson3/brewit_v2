@@ -85,7 +85,6 @@ export class App extends Component {
           </div>
 
           <SearchTour />
-          <div> Hello! </div>
           <BeerSearch onChange={this.handleBeerChange} />
           <LocationSearch hidden={(beers.length > 0)} onChange={this.handleBreweryChange} />
           <BeerList beers={beers} />
