@@ -17,11 +17,11 @@ const path = require('path')
 app.set('port', (process.env.PORT || 3000))
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join('dist/index.html'))
+  res.sendFile(path.join(__dirname, 'dist/index.html'))
 })
 
 app.get('/app.js', function(req, res) {
-  res.sendFile(path.join('dist/app.js'))
+  res.sendFile(path.join(__dirname, 'dist/app.js'))
 })
 
 app.get('/beers', function (req, res) {

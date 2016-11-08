@@ -11,7 +11,8 @@
     "test": "BABEL_ENV='test' karma start --single-run --reporters mocha",
     "pretest": "npm run build",
     "build": "webpack --progress --colors",
-    "lint": "standard"
+    "lint": "standard",
+    "postinstall": "node run build"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
