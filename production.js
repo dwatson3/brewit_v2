@@ -6,8 +6,6 @@ const app = express()
 
 const request = require('superagent')
 
-const key = "e63ad44332232752dd66fb3afe5016a9"
-
 app.use('/images', express.static('Images'))
 
 app.use('/dist', express.static('dist'))
