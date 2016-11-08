@@ -6,6 +6,8 @@ const app = express()
 
 const request = require('superagent')
 
+const key = process.env.API_KEY
+
 app.use('/images', express.static('Images'))
 
 app.use('/dist', express.static('dist'))
