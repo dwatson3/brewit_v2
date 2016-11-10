@@ -6,7 +6,7 @@ const app = express()
 
 const request = require('superagent')
 
-const key = process.env.API_KEY
+const key = process.env.API_KEY || require('./config.json').api_secret_key
 
 app.use('/images', express.static('Images'))
 
