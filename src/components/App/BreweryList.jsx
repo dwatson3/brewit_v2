@@ -8,15 +8,24 @@ class BreweryList extends Component {
       return (
         <div key={`${brewery.brewery.name}-${index}`} className='BreweryListContainer'>
             <div className='BreweryInfo'>
-              <h3>{brewery.brewery.name}</h3>
-              <h5>{brewery.brewery.description}</h5>
-              <h5>{brewery.brewery.isOrganic === 'Y' ? 'Organic' : 'Not Organic'}</h5>
-              <h5>{brewery.streetAddress}</h5>
-              <div>{brewery.phone}</div>
-              <div>{brewery.locationType}</div>
-              <div>{brewery.locality}</div>
-              <div>{brewery.name}</div>
-              <h5><a href={brewery.brewery.website}>{brewery.brewery.website}</a></h5>
+              <div className='BreweryName'>{brewery.brewery.name}</div>
+
+              <h5>
+                <a href={brewery.brewery.website} className='BreweryWeblink'>
+                  {brewery.brewery.website}
+                </a>
+              </h5>
+
+              <div>
+                <a href={brewery.phone}>
+                  {brewery.phone}
+                </a>
+              </div>
+
+              <h5>{brewery.streetAddress}, {brewery.locality}</h5>
+
+              <h5 className='BreweryListDesc'>{brewery.brewery.description}</h5>
+              <h5 className='OrganicOption'> Organic beers on tap? {brewery.brewery.isOrganic === 'Y' ? 'Organic' : 'Not Organic'}</h5>
             </div>
         </div>
         )

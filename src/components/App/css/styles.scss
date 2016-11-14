@@ -17,10 +17,10 @@ ul.LeftFlexContainer {
   background-color: #E88140;
   display: flex;
   font-family: 'Open Sans', sans-serif;
-  height: 130px;
-
-  list-style-type: none;
   flex-grow: 1;
+
+  height: 130px;
+  list-style-type: none;
   min-width: 100%;
 
 }
@@ -81,26 +81,24 @@ li.Left.Title {
 }
 
 .Beer-search-form {
-  text-align: center;
   padding-bottom: 40px;
   padding-top: 60px;
+  text-align: center;
 }
 
 .Beer-search-form input, .Location-search-form input {
-  height: 30px;
-  width: 300px;
-  padding-left: 10px;
-
   border: 3px solid #4CB2AD;
+  height: 30px;
+  padding-left: 10px;
+  width: 300px;
 }
 
 .Placeholder {
+  bottom: 5px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   position: relative;
-  bottom: 5px;
   right: 120px;
-
 }
 
 .Location-search-form {
@@ -108,39 +106,66 @@ li.Left.Title {
 }
 
 .beer-search, .location-search {
-  position: relative;
-  left: 10px;
-
   background-color: #4CB2AD;
   border: 1px solid #4CB2AD;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+
   height: 30px;
   width: 70px;
+
+  left: 10px;
+  position: relative;
 }
 
 .beer-search-clear, .location-search-clear {
-  border: none;
   background: none;
+  border: none;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  position: relative;
+
   left: 20px;
+  position: relative;
 }
 
-// CSS for BreweryList File
+// CSS for BreweryList Component
 .BreweryListContainer {
   margin: 0 auto;
   padding-top: 60px;
-  text-align: center;
+  text-align: left;
 }
 
 .BreweryInfo {
-  padding-left: 20%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+
+  justify: left-justify;
+  padding-left: 5%;
   padding-right: 20%;
   padding-top: 20px;
-  justify: left-justify;
+}
+
+.BreweryName {
+  font-family: 'Bungee';
+  font-size: 36px;
+  padding-bottom: 10px;
+}
+
+.BreweryWebLink {
+  margin-bottom: 5px;
+}
+
+.BreweryListDesc {
+  margin-top: 25px;
+}
+
+h5.OrganicOption {
+  // font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 // CSS for Contact Component
@@ -158,9 +183,9 @@ li.Left.Title {
 }
 
   .Contact, .About {
+    color: #5D5E5E;
     font-family: 'Bungee', cursive;
     font-size: 36px;
-    color: #5D5E5E;
     padding-bottom: 20px;
   }
 
@@ -169,10 +194,11 @@ li.Left.Title {
 .About-Container {
   font-size: 18px;
   margin: 0 auto;
-  padding-top: 60px;
-  text-align: center;
   padding-left: 30%;
   padding-right: 30%;
+
+  padding-top: 60px;
+  text-align: center;
 }
 
 .About-SubTitle {
@@ -181,14 +207,14 @@ li.Left.Title {
 
 // CSS SearchTour Component
 .SearchContainer {
-  text-align: center;
   padding-top: 60px;
+  text-align: center;
 }
 
 .SearchLogo {
+  color: #5D5E5E;
   font-family: 'Bungee', cursive;
   font-size: 40px;
-  color: #5D5E5E;
 }
 
 .SearchSubtitle {
@@ -201,13 +227,8 @@ a.PortfolioLink {
 }
 
 .BeerSearchResults {
-  // padding-left: 60px;
-  // padding-right: 80px;
-  // padding-bottom: 50px;
-  margin-top: 40px;
   display: flex;
-  // flex-direction: column;
-  // max-width: 60%;
+  margin-top: 40px;
 }
 
 .BeerSearchDesc {
@@ -223,44 +244,29 @@ a.PortfolioLink {
 .LogoStyle {
   height: 250px;
   width: 250px;
+
   border-radius: 50%;
-  position: relative;
+  margin-bottom: 20px;
   padding-top: 20px;
   padding-right: 20px;
-  margin-bottom: 20px;
+  position: relative;
 }
 
 .FirstColumn {
-  // flex-direction: column;
   flex: 1 0;
 }
 
 .SecondColumn {
-  // flex-direction: column;
   flex: 3 0;
 }
 
 // ********** BeerList Component CSS  *********
-
-// ul.BeerSearchResults li {
-//   display: inline;
-//   // margin: 0 auto;
-// }
-
-// li .BeerSearchResults {
-//   display: inline;
-// }
 
 .BeerName {
   padding-bottom: 10px;
 }
 
 .BeerName {
-  // padding-left: 20px;
-  // float: right;
-  // position: relative;
-  // right: 40%;
-  // top: 20px;
 }
 
 .Available {
@@ -283,8 +289,8 @@ a.PortfolioLink {
 
 span.Option {
   font-style: normal;
-  padding-left: 5px;
   margin-top: 5px;
+  padding-left: 5px;
 }
 
 .Righty {
@@ -293,5 +299,4 @@ span.Option {
 }
 
 .Test li {
-  // display: inline;
 }
