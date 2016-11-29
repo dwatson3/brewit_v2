@@ -46,7 +46,7 @@ export class About extends Component {
           more about craft beers. Alot of friends around me seemed to
           have this innate knowledge on beers, but I had
           no clue. So I built Brew-It to indulge my curiosity.
-          This app is mobile-friendly, and if you're traveling around the US,
+          If you are traveling around the US,
           you have access to see what breweries are around in your area.
           </p>
           <div>Have fun using Brew-It!</div>
