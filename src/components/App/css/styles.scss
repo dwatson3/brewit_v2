@@ -1,3 +1,141 @@
+@media (min-width: 950px) {
+  
+  .Container {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.FlexContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  -webkit-flex-direction: row;
+}
+
+  ul.LeftFlexContainer {
+  background-color: #E88140;
+  // changed the component list styles here on display
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  flex-grow: 1;
+
+  height: 130px;
+  list-style-type: none;
+  min-width: 100%;
+}
+
+
+.LeftFlexContainer li {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding-top: 5px;
+}
+
+li.Title {
+  flex: 0 0 600px;
+}
+
+span.TitleText {
+  color: #fff;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 36px;
+}
+
+.Left {
+  float: left;
+}
+
+.Subtitle {
+  position: relative;
+  top: 80px;
+  right: 290px;
+}
+
+.PageLink {
+  flex: 1 0;
+  padding-right: 20px;
+}
+
+.PageLink a:link, a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.PageLink a:hover {
+  color: #5D5E5E;
+  text-decoration: none;
+}
+
+.Right a {
+  float: right;
+  padding: 20px;
+}
+
+li.Right.Top {
+  padding-top: 20px;
+}
+
+li.Left.Title {
+  font-size: 36px;
+}
+
+.Beer-search-form {
+  padding-bottom: 40px;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.Beer-search-form input, .Location-search-form input {
+  border: 3px solid #4CB2AD;
+  height: 30px;
+  padding-left: 10px;
+  width: 300px;
+}
+
+.Placeholder {
+  bottom: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  position: relative;
+  right: 120px;
+}
+
+.Location-search-form {
+  text-align: center;
+}
+
+.beer-search, .location-search {
+  background-color: #4CB2AD;
+  border: 1px solid #4CB2AD;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+
+  height: 30px;
+  width: 70px;
+
+  left: 10px;
+  position: relative;
+}
+
+.beer-search-clear, .location-search-clear {
+  background: none;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+
+  left: 20px;
+  position: relative;
+}
+
+}
+
+@media (max-width: 950px) {
+
 .Container {
   background-color: #fff;
   height: 100%;
@@ -19,7 +157,7 @@ ul.LeftFlexContainer {
   font-family: 'Open Sans', sans-serif;
   flex-grow: 1;
 
-  height: 130px;
+  height: 170px;
   list-style-type: none;
   min-width: 100%;
 
@@ -128,6 +266,9 @@ li.Left.Title {
   left: 20px;
   position: relative;
 }
+
+}
+
 
 // CSS for BreweryList Component
 .BreweryListContainer {
