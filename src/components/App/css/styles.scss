@@ -1,3 +1,9 @@
+// Media queries added for responsive design on the
+// Home Page, About, and Contact Components
+
+// One @media query for min-width 950px
+// Another @media query added for max-width 950px
+
 @media (min-width: 950px) {
   
   .Container {
@@ -18,7 +24,7 @@
   ul.LeftFlexContainer {
   background-color: #E88140;
   // changed the component list styles here on display
-  display: inline-block;
+  display: flex;
   font-family: 'Open Sans', sans-serif;
   flex-grow: 1;
 
@@ -135,7 +141,6 @@ li.Left.Title {
 }
 
 @media (max-width: 950px) {
-
 .Container {
   background-color: #fff;
   height: 100%;
@@ -153,13 +158,14 @@ li.Left.Title {
 
 ul.LeftFlexContainer {
   background-color: #E88140;
-  display: flex;
+  display: inline-block;
   font-family: 'Open Sans', sans-serif;
   flex-grow: 1;
 
-  height: 170px;
+  height: 200px;
   list-style-type: none;
   min-width: 100%;
+  text-align: center;
 
 }
 
@@ -192,6 +198,8 @@ span.TitleText {
 
 .PageLink {
   flex: 1 0;
+  // changed the margin top here
+  margin-top: 2px;
   padding-right: 20px;
 }
 
@@ -310,6 +318,7 @@ h5.OrganicOption {
 }
 
 // CSS for Contact Component
+@media (min-width: 950px) {
 .Contact-Container {
   margin: 0 auto;
   padding-top: 60px;
@@ -329,9 +338,33 @@ h5.OrganicOption {
     font-size: 36px;
     padding-bottom: 20px;
   }
+}
+
+@media (max-width: 950px) {
+  .Contact-Container {
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: center;
+}
+
+.Contact-Container p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+  .Contact, .About {
+    color: #5D5E5E;
+    font-family: 'Bungee', cursive;
+    font-size: 36px;
+    padding-bottom: 20px;
+  }
+}
 
 
 // CSS for About Component
+@media (min-width: 950px) {
 .About-Container {
   font-size: 18px;
   margin: 0 auto;
@@ -344,6 +377,24 @@ h5.OrganicOption {
 
 .About-SubTitle {
   font-size: 24px;
+}
+}
+
+@media (max-width: 950px) {
+
+  .About-Container {
+  font-size: 18px;
+  margin: 0 auto;
+  padding-left: 20%;
+  padding-right: 20%;
+
+  padding-top: 60px;
+  text-align: center;
+}
+
+.About-SubTitle {
+  font-size: 24px;
+}
 }
 
 // CSS SearchTour Component
